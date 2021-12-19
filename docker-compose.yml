@@ -12,11 +12,11 @@ services:
     container_name: db_mysql
     networks:
       - app-net
-  centos7:
+  centos8:
     image: centos:8
     platform: linux/amd64
     command: sleep infinity
-    container_name: centos7
+    container_name: centos8
     networks:
       - app-net
 
