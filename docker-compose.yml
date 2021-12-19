@@ -1,0 +1,25 @@
+version: '3'
+services:
+  mysql:
+    platform: linux/x86_64
+    image: mysql:5.7
+    volumes:
+      - ./share/my.cnf:/etc/mysql/conf.d/my.cnf
+    restart: always
+    environment:
+      MYSQL_DATABASE: metastore
+      MYSQL_ROOT_PASSWORD: root
+    container_name: db_mysql
+    networks:
+      - app-net
+  centos7:
+    image: centos:8
+    platform: linux/amd64
+    command: sleep infinity
+    container_name: centos7
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
