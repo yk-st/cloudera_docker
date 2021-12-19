@@ -1,9 +1,9 @@
 {
 	"name": "pyspark", // コンテナ表示名
     "dockerComposeFile": "../docker-compose.yml",
-	"service": "workspace", // Docker Composeのサービス名
+	"service": "centos8", // Docker Composeのサービス名
 	"remoteUser": "root", // デフォルトユーザをrootから切り替える
-	"workspaceFolder": "/", // Workspaceのフォルダを指定
+	"workspaceFolder": "/root", // Workspaceのフォルダを指定
 	"extensions": [ // コンテナ内でインストールするVS Codeの拡張機能ID
 		"ms-python.python",
 		"dbaeumer.vscode-eslint",

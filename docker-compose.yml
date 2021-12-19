@@ -9,17 +9,17 @@ services:
     environment:
       MYSQL_DATABASE: metastore
       MYSQL_ROOT_PASSWORD: root
-    container_name: db_mysql
+    container_name: cloudera_mysql
     networks:
-      - app-net
+      - cloudera-net
   centos8:
     image: centos:8
     platform: linux/amd64
     command: sleep infinity
     container_name: centos8
     networks:
-      - app-net
+      - cloudera-net
 
 networks:
-  app-net:
+  cloudera-net:
     driver: bridge
